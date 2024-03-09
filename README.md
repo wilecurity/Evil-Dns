@@ -15,11 +15,18 @@ Linux Evil-DNS is a Python script that enables users to redirect specified domai
    ```bash
    git clone https://github.com/yourusername/linux-evil-dns.git
 
-   
-2. cd linux-evil-dns
 
 
-3. python3 evil_dns.py
+2.   ```bash
+     cd linux-evil-dns
+
+
+3.  ```bash
+     python3 evil_dns.py
+
+
+
+
 
 
 
