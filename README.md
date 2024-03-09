@@ -26,11 +26,13 @@ Linux Evil-DNS is a Python script that enables users to redirect specified domai
 
 
 
- Usage
+## Usage
 
-    Enter the IP address you want to redirect to when prompted.
-    Enter the domains you want to redirect (comma-separated) when prompted.
-    The script will generate a Python script named generated_script.py which will perform the redirection.
+1. Enter the IP address you want to redirect to when prompted.
+2. Enter the domains you want to redirect (comma-separated) when prompted.
+3. The script will generate a Python script named generated_script.py which will perform the redirection. 
+
+
 
 
 
