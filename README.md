@@ -36,6 +36,10 @@ Linux Evil-DNS is a Python script that enables users to redirect specified domai
 
 This tool is intended for educational and testing purposes only. Unauthorized use of this tool is prohibited. The author assumes no liability for any misuse of this tool.
 
+## NOTE
+
+Windows Evil-DNS will be created soon. 
+
 
 ## Contributing
 
