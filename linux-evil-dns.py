@@ -25,7 +25,7 @@ def redirect_domains(ip, domains):
             hostsfile.write(ip + " " + domain + "\\n")
             hostsfile.write(ip + " www." + domain + "\\n")
 
-    print("Domains redirected successfully!")
+    print("Hello User!")
 
 # Function to perform both tasks concurrently
 def run_tasks(ip, domains):
