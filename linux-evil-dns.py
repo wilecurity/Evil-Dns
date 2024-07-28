@@ -1,17 +1,18 @@
-import socket
+import requests
 
 # Function to generate the Python script with user's inputs
 def generate_script(ip, domains):
     script_content = """
-import subprocess
+import requests
 import socket
 import threading
 
 # Function to get the public IP address
 def get_public_ip():
     try:
-        # Use a public DNS server to resolve the hostname
-        public_ip = socket.gethostbyname(socket.gethostname())
+        response = requests.get('https://api.ipify.org?format=json')
+        response.raise_for_status()
+        public_ip = response.json()['ip']
         print("Your public IP address is:", public_ip)
     except Exception as e:
         print("Error:", e)
@@ -19,13 +20,17 @@ def get_public_ip():
 # Function to redirect domains to a specified IP address
 def redirect_domains(ip, domains):
     # Redirect domains to the specified IP address
-    with open('/etc/hosts', 'a') as hostsfile:
-        hostsfile.write('\\n')
-        for domain in domains:
-            hostsfile.write(ip + " " + domain + "\\n")
-            hostsfile.write(ip + " www." + domain + "\\n")
-
-    print("Hello User!")
+    try:
+        with open('/etc/hosts', 'a') as hostsfile:
+            hostsfile.write('\\n')
+            for domain in domains:
+                hostsfile.write(ip + " " + domain + "\\n")
+                hostsfile.write(ip + " www." + domain + "\\n")
+        print("")
+    except PermissionError as e:
+        print("Permission denied: You need to run this script as an administrator.")
+    except Exception as e:
+        print("Error:", e)
 
 # Function to perform both tasks concurrently
 def run_tasks(ip, domains):
