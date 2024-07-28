@@ -33,8 +33,6 @@ Linux Evil-DNS is a Python script that enables users to redirect specified domai
 3. The script will generate a Python script named generated_script.py which you can rename & send to the victim to perform redirection.
 
 
-[![Video Walktrough](https://img.youtube.com/vi/abc123/0.jpg)](https://youtu.be/5sOYY7zZlJ4)
-
 ## Disclaimer
 
 This tool is intended for educational and testing purposes only. Unauthorized use of this tool is prohibited. The author assumes no liability for any misuse of this tool.
